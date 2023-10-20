@@ -15,6 +15,6 @@ ffmpeg -i $1 -i $2 -bsf:a aac_adtstoasc -c copy -c:s mov_text -metadata:s:s:0 la
 ```
 
 Then, you can just call the script like so:
-````bash
+```bash
 ./download-fau-tv.sh <text copied from chrome extension> <your-desired-filename.mp4>
 ```
