@@ -1,0 +1,24 @@
+{
+    "name": "fau-dl-chrome-ext",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Demonstrates the webRequest.onAuthRequired listener to detect an authentication request and log the user into the designated site.",
+    "background": {
+      "service_worker": "service-worker.js"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestAuthProvider",
+        "contextMenus",
+        "clipboardWrite"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "host_permissions": ["*://*/*"]
+  }
